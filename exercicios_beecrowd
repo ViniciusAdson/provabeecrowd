@@ -1,0 +1,313 @@
+******QUESTÃO 1035******
+
+#include <stdio.h>
+
+int main(){
+   
+int A;
+int B;
+int C;
+int D;
+   
+   scanf("%d %d %d %d", &A, &B, &C, &D);
+   
+   if(B>C && D>A && C+D>A+B && C>0 && D>0 && A%2==0){
+       
+       printf("Valores aceitos\n");
+   }
+   
+   else{
+       printf("Valores nao aceitos\n");
+   }
+   
+   return 0;
+}
+
+******QUESTÃO 1038******
+
+#include <stdio.h>
+int main(){
+ 
+ int item, qtd;
+scanf("%d %d", &item, &qtd);
+ 
+if(item == 1)
+    printf("Total: R$ %.2f\n",qtd*4.00);
+ 
+ else
+ 
+if(item == 2)
+    printf("Total: R$ %.2f\n",qtd*4.50);
+
+else
+
+if(item == 3)
+    printf("Total: R$ %.2f\n",qtd*5.00);
+
+else
+
+if(item == 4)
+    printf("Total: R$ %.2f\n",qtd*2.00);
+
+else
+
+if(item == 5)
+    printf("Total: R$ %.2f\n",qtd*1.50);
+    
+}
+
+******QUESTÃO 1061******
+#include<stdio.h>
+
+int main(){
+
+int dia;
+int dfim;
+int hora; 
+int hfim; 
+int minuto;
+int minfim; 
+int segundo;
+int sfim;
+
+scanf("Dia %d", &dia);
+
+scanf("%d : %d : %d\n", &hora, &minuto, &segundo);
+
+scanf("Dia %d", &dfim);
+
+scanf("%d : %d : %d", &hfim, &minfim, &sfim);
+
+segundo = sfim - segundo;
+
+minuto = minfim - minuto;
+ 
+hora = hfim - hora;
+ 
+dia = dfim - dia;
+
+if (segundo < 0){
+ 
+ segundo += 60;
+ minuto--;
+ 
+}
+
+ if (minuto < 0){
+ 
+ minuto += 60;
+ hora--;
+ 
+}
+
+if (hora < 0){
+ 
+ hora += 24;
+ dia--;
+ 
+}
+
+printf("%d dia(s)\n", dia);
+
+printf("%d hora(s)\n", hora);
+ 
+printf("%d minuto(s)\n", minuto);
+ 
+printf("%d segundo(s)\n", segundo);}
+
+
+******QUESTÃO 1131******
+
+#include <stdio.h>
+
+int main(){
+	
+	int x, y, m = 0, inter = 0, gremio = 0, e = 0, j;
+	
+while(1){
+scanf("%d %d", &x,&y);
+printf("Novo grenal (1-sim 2-nao)\n");
+m++;
+
+if(x > y) inter++;
+
+else if(x<y) gremio++;
+
+else e++;
+scanf("%d", &j );
+if(j==1)continue;
+ else break;
+ 
+ printf("%d grenais\n", m);		
+	printf("inter:%d\n", inter);			
+		 printf("gremio:%d\n", gremio);
+		 	printf("empates:%d\n", e);		
+		
+if (inter>gremio)printf("Inter venceu mais\n");
+
+	else if(inter<gremio)printf("Gremio venceu mais\n");
+	
+		else printf("Nao houve vencedor");
+	
+	} 
+	
+	return 0;
+}
+
+
+
+
+
+******QUESTÃO 1866******
+
+#include <stdio.h>
+int main(){
+    
+int i;
+int n;
+int x;
+
+scanf("%d",&n);
+
+for(i = 0;i < n; i++){
+        scanf("%d", &x);
+        
+	if(x%2==0)
+        
+		printf("0\n");
+        
+	else printf("1\n");
+    }
+return 0;
+}
+
+******QUESTÃO 1985******
+
+#include <stdio.h>
+int main() {
+
+int qp, cp, qtd;
+
+float total = 0.0;
+    
+scanf("%i", &qp);
+    
+    while (qp--) {
+
+    scanf("%i %i", &cp,&qtd);
+        
+if (cp == 1001) {
+            
+        total += 1.5 * qtd;
+        
+    
+}
+else if (cp == 1002) {
+            
+            total += 2.5 * qtd;
+        
+    
+}
+
+else if (cp == 1003) {
+            
+            total += 3.5 * qtd;
+        
+    
+}
+else if (cp == 1004) {
+            
+            total += 4.5 * qtd;
+        }
+        
+        else {
+            
+            total += 5.5 * qtd;
+        
+            
+        }
+        
+    }
+    
+    printf("%.2f\n", total);
+
+    return 0;
+}
+
+******QUESTÃO 3303******
+
+#include <stdio.h>
+#define MAX_TAM 20
+
+
+unsigned int getTam(char *palavrao) {
+
+unsigned int tam = 0;
+
+if (!(palavrao[tam] == '\0' && tam == 0))
+ 		while (palavrao[++tam] != '\0');
+	
+
+return tam;
+}
+
+int main() {
+    
+char palavrao[MAX_TAM];
+    
+scanf("%s", palavrao);
+
+printf("palavr%s\n", (getTam(palavrao) < 10? "inha" : "ao"));
+
+    
+return 0;
+}
+
+******QUESTÃO 1962******
+
+#include <stdio.h>
+int main() {
+int N, ANO;
+    
+scanf("%i", &N);
+    
+while (N--){
+        scanf("%i", &ANO);
+        
+if (ANO < 2015)
+printf("%i d.C.\n", 2015 - ANO);
+        
+else
+printf("%i a.C.\n", ANO - 2014);
+    
+    
+}
+
+******QUESTÃO 1011******
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+
+double r;
+scanf("%lf", &r);
+
+printf("VOLUME = %.3lf\n", 3.14159* 4/3 *pow(r, 3.0));
+    
+return 0;}
+
+******QUESTÃO 1017******
+#include <stdio.h>
+int main(){
+int t, v, d;
+double l;
+
+scanf("%d\n%d", &t, &v);
+d = v*t;
+l = d/12.0;
+
+printf("%.3lf\n", l);
+
+return 0;}
+***********************************************************************
