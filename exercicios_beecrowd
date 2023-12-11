@@ -275,21 +275,24 @@ return 0;
 ******QUESTÃO 1962******
 
 #include <stdio.h>
+
 int main() {
 int N, ANO;
     
 scanf("%i", &N);
     
-while (N--){
-        scanf("%i", &ANO);
+while (N--) {
+        
+scanf("%i", &ANO);
         
 if (ANO < 2015)
-printf("%i d.C.\n", 2015 - ANO);
+printf("%i D.C.\n", 2015 - ANO);
         
 else
-printf("%i a.C.\n", ANO - 2014);
-    
-return 0;    
+
+printf("%i A.C.\n", ANO - 2014);}
+
+    return 0;
 }
 
 ******QUESTÃO 1011******
